@@ -39,7 +39,10 @@ const computerScore = 0;
 
 //La funzione riceve come parametri getHumanChoice() e getComputerChoice().
 //bisogna confrontare le due scelte per determinare il vincitore del round.
-
- function round (getComputerChoice, getHumanChoice){
+// se la scelta umana e 0 e la scleta pc 0 
+function round (getComputerChoice, getHumanChoice){
+    if (getComputerChoice() === getHumanChoice()){
+        return 'Parità'
+    }
     
  }
