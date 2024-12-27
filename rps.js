@@ -31,5 +31,11 @@ function getHumanChoice(int) {
   }
 }
 
-//Dichiarare le variabili per tener traccia del punteggio dei giocatori
+//Dichiarare le variabili per tener traccia del punteggio dei giocatori (humanScore, computerScore)
+//inizializzare le variabili con 0
+
+const humanScore = 0;
+const computerScore = 0;
+
+
 
