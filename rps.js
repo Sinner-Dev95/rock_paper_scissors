@@ -37,5 +37,9 @@ function getHumanChoice(int) {
 const humanScore = 0;
 const computerScore = 0;
 
+//La funzione riceve come parametri getHumanChoice() e getComputerChoice().
+//bisogna confrontare le due scelte per determinare il vincitore del round.
 
-
+ function round (getComputerChoice, getHumanChoice){
+    
+ }
