@@ -11,7 +11,7 @@ function getComputerChoice() {
       return 'Paper';
     }
     else if (Computerchoice === 2){
-      return 'Scissor';
+      return 'Scissors';
     }
     else {
       return 'Elemento non valido';
@@ -25,7 +25,7 @@ function getComputerChoice() {
 
 function getHumanChoice (){
   const scelta = window.prompt('Choose between rock paper or scissors!');
-  if (scelta() === 'rock'){
+  if (scelta === 'rock'){
     return 'Rock';
   }
   else if (scelta.toLowerCase() === 'paper'){
@@ -33,15 +33,41 @@ function getHumanChoice (){
   }
   else if (scelta.toLowerCase() === 'scissors')
     return 'Scissors';
-  else {'Scelta non valida'}
+  else {return 'Scelta non valida'}
 
   
 }
 
-const humanScore = 0;
-const computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 //Funzione ineerente al round del gioco
 
+function playRound() {
+  const humanChoice = getHumanChoice().toLowerCase();
+  const computerChoice = getComputerChoice().toLowerCase();
+  
+  if (humanChoice === 'Scelta non valida'){
+    return 'Devi scegliere tra Rock Paper o Scissors'
+  }
+  if (humanChoice === computerChoice ){
+    humanScore++;
+    computerScore++;
+    return `Pareggio entrambi avete scelto ${humanChoice}!`
+  }
+  else if (
+    (humanChoice === 'Rock' && computerChoice === 'Scissors') ||
+    (humanChoice === 'Paper' && computerChoice === 'Rock') ||
+    (humanChoice === 'Scissors' && computerChoice === 'Paper')
+  ){
+    humanScore++; //serve ad incrementare score umano
+    return `Complimenti ${humanChoice} batte ${computerChoice}`
+  }
+  else {
+    computerScore++; //serve ad incrementare score computer
+    return `Hai perso ${computerChoice} batte ${humanChoice}`
+  }
+
+}
 
 
 
