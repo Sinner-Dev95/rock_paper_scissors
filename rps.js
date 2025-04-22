@@ -33,33 +33,12 @@ const btnScissor = document.querySelector('.scissor');
 
 // RESULT AND SCORE 
 const result = document.querySelector('#risultato');
-const punteggi = document.querySelector('#punteggi');
+const humanScoreSpan = document.querySelector('#human-score');
+const computerScoreSpan = document.querySelector('#computer-score');
 
 
 //SCELTA UMANA 
 
-function getHumanChoice (){
-  const scelta = window.prompt('Choose between rock, paper or scissor');
-  switch (scelta.toLowerCase()) {
-    case 'rock':
-      return 'rock';
-      
-    
-      case 'paper':
-      return 'paper';
-      
-      
-      case 'scissor':
-      case 'scissors':
-      return 'scissor';
-      
-  
-  
-    default:
-      return 'Scegli tra le opzioni disponibili';
-      
-  }
-}
 
 
 
