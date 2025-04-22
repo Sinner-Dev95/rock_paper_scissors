@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif; /* Un font più futuristico */
+    padding: 20px;
+    background-color: #0f0f1a; /* Sfondo scuro */
+    color: #00f2ff; /* Testo ciano neon */
+}
+
+h1, p {
+    text-align: center;
+}
+
+h1 {
+    color: #f700ff; /* Rosa neon */
+    margin: 0 0 10px 0;
+    text-shadow: 0 0 10px rgba(247, 0, 255, 0.7); /* Effetto glow */
+}
+
+p {
+    color: #c2fcff; /* Testo più chiaro */
+}
+
+.btn-group {
+    padding: 30px;
+    border: 2px solid #00f2ff; /* Bordo ciano neon */
+    border-radius: 5px;
+    margin: 20px auto;
+    background-color: rgba(17, 17, 34, 0.7); /* Sfondo leggermente più chiaro con trasparenza */
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.5); /* Glow ciano */
+    
+    /* Mobile-first: display flex con direzione colonna */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 90%;
+}
+
+button {
+    padding: 10px;
+    border: 3px solid #00f2ff; /* Bordo ciano */
+    background-color: rgba(255, 255, 255, 0.15); /* Sfondo semi-trasparente */
+    color: #00f2ff; /* Testo ciano */
+    border-radius: 50%;
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 150px;
+    max-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 242, 255, 0.7); /* Effetto glow sul testo */
+}
+
+
+
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.8); /* Glow intenso al passaggio del mouse */
+    background-color: rgba(255, 255, 255, 0.25); /* Sfondo leggermente più chiaro al passaggio del mouse */
+    /* altre proprietà hover esistenti */
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 30px rgba(0, 242, 255, 1); /* Glow ancora più intenso al click */
+    background-color: rgba(255, 255, 255, 0.35); /* Ancora più chiaro quando premuto */
+    /* altre proprietà active esistenti */
+}
+
+/* Per dare un effetto neon diverso a ciascun pulsante */
+button.rock {
+    border-color: #f700ff; /* Rosa neon */
+    box-shadow: 0 0 10px rgba(247, 0, 255, 0.5);
+}
+
+button.paper {
+    border-color: #00ff41; /* Verde neon */
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+button.scissor {
+    border-color: #ff8800; /* Arancione neon */
+    box-shadow: 0 0 10px rgba(255, 136, 0, 0.5);
+}
+
+button.rock:hover, button.rock:active {
+    box-shadow: 0 0 20px rgba(247, 0, 255, 0.8);
+}
+
+button.paper:hover, button.paper:active {
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.8);
+}
+
+button.scissor:hover, button.scissor:active {
+    box-shadow: 0 0 20px rgba(255, 136, 0, 0.8);
+}
+
+
+
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+    .btn-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 600px; /* Larghezza fissa più stretta */
+        gap: 15px; /* Spazio ridotto tra i pulsanti */
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    .btn-group {
+        flex-direction: row;
+        justify-content: center; /* Centrato invece di space-between */
+        max-width: 650px; /* Larghezza fissa leggermente più ampia del tablet */
+        gap: 25px; /* Un po' più di spazio tra i pulsanti */
+    }
+}

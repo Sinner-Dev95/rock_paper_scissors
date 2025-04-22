@@ -26,6 +26,15 @@ function getComputerChoice() {
 
 
 
+//BUTTON GAME
+const btnRock = document.querySelector('.rock');
+const btnPaper = document.querySelector('.paper');
+const btnScissor = document.querySelector('.scissor');
+
+// RESULT AND SCORE 
+const result = document.querySelector('#risultato');
+const punteggi = document.querySelector('#punteggi');
+
 
 //SCELTA UMANA 
 
