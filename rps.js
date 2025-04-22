@@ -4,7 +4,7 @@ console.log("Hello World");
 
 function getComputerChoice() {
     const computerChoice = Math.floor(Math.random()*3); // consente di generare un numero tra 0 1 2 , floor serve per arrotondare il numero 
-    console.log("Numero generato:", computerChoice);
+    
   switch (computerChoice) {
     case 0:
      return 'rock';
@@ -44,14 +44,47 @@ const computerScoreSpan = document.querySelector('#computer-score');
 
 btnRock.addEventListener('click', (e)=>{
  let sceltaRock = playRound('rock');
+ result.textContent = sceltaRock;
+ humanScoreSpan.textContent = humanScore;
+ computerScoreSpan.textContent = computerScore; 
+
+ if(humanScore >= 5){
+  result.textContent = 'HAI VINTO!!'
+ }
+else if (computerScore >= 5){
+  result.textContent = 'COMPUTER HA VINTO!!'
+}
+ 
 })
 
 btnPaper.addEventListener('click', (e)=>{
   let sceltaPaper = playRound('paper');
+  result.textContent = sceltaPaper;
+  humanScoreSpan.textContent = humanScore;
+  computerScoreSpan.textContent = computerScore; 
+ 
+  if(humanScore >= 5){
+   result.textContent = 'HAI VINTO!!'
+  }
+ else if (computerScore >= 5){
+   result.textContent = 'COMPUTER HA VINTO!!'
+ }
+  
 })
 
 btnScissor.addEventListener('click', (e)=>{
-  let sceltaScissor = playRound('scissor'),
+  let sceltaScissor = playRound('scissor');
+   result.textContent = sceltaScissor;
+ humanScoreSpan.textContent = humanScore;
+ computerScoreSpan.textContent = computerScore; 
+
+ if(humanScore >= 5){
+  result.textContent = 'HAI VINTO!!'
+ }
+else if (computerScore >= 5){
+  result.textContent = 'COMPUTER HA VINTO!!'
+}
+  
 })
 
 
