@@ -38,9 +38,21 @@ const computerScoreSpan = document.querySelector('#computer-score');
 
 
 //SCELTA UMANA 
+//scelta umana integrata in funzione playRound
 
+// EVENTI BUTTON
 
+btnRock.addEventListener('click', (e)=>{
+ let sceltaRock = playRound('rock');
+})
 
+btnPaper.addEventListener('click', (e)=>{
+  let sceltaPaper = playRound('paper');
+})
+
+btnScissor.addEventListener('click', (e)=>{
+  let sceltaScissor = playRound('scissor'),
+})
 
 
 //SCORE OF ROUND
@@ -50,8 +62,8 @@ let computerScore = 0;
 
 //MATCH
 
-function playRound() {
-  const humanChoice = getHumanChoice();
+function playRound(humanChoice) {
+  
   const computerChoice = getComputerChoice();
   
   if (humanChoice === 'Scegli tra le opzioni disponibili') {
